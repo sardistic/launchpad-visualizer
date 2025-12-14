@@ -36,22 +36,21 @@ The application uses the Top Row (Automap buttons) and the Side Column for contr
 ```text
        [VOL-]  [VOL+]  [PREV]  [NEXT]  [PEAK]  [DEC-]  [DEC+]  [MUTE]
       +-------+-------+-------+-------+-------+-------+-------+-------+
+      |       |       |       |       |       |       |       |       |   [AUDIO]
       |       |       |       |       |       |       |       |       |
+      |       |       |       |       |       |       |       |       |   [    ]
       |       |       |       |       |       |       |       |       |
+      |       |       |       |       |       |       |       |       |   [    ]
       |       |       |       |       |       |       |       |       |
+      |       |       |       |       |       |       |       |       |   [    ]
       |       |       |       |       |       |       |       |       |
-      |       |       |       |       |       |       |       |       |
-      |                                                               |
-      |                                                               |
-      |                  V I S U A L I Z E R                          |   [AUDIO]
+      |                  V I S U A L I Z E R                          |   [    ]
       |                        G R I D                                |
-      |                                                               |
-      |                                                               |
+      |       |       |       |       |       |       |       |       |   [    ]
       |       |       |       |       |       |       |       |       |
+      |       |       |       |       |       |       |       |       |   [    ]
       |       |       |       |       |       |       |       |       |
-      |       |       |       |       |       |       |       |       |
-      |       |       |       |       |       |       |       |       |
-      |       |       |       |       |       |       |       |       |
+      |       |       |       |       |       |       |       |       |   [    ]
       +-------+-------+-------+-------+-------+-------+-------+-------+
 ```
 
@@ -62,7 +61,7 @@ The application uses the Top Row (Automap buttons) and the Side Column for contr
 | **PEAK** | Peak Toggle | Toggle floating peak indicators (Mode 1 only). |
 | **DEC- / DEC+** | Decay Rate | Adjust visual decay speed (Slower/Faster). |
 | **MUTE** | Mute Arm | Hold for 0.4s to toggle system mute (prevents accidental presses). |
-| **AUDIO** | Input Cycle | Top-right side button. Cycles through available audio input devices. |
+| **AUDIO** | Input Cycle | Top-right side button (Key 89). Cycles through available audio input devices. |
 
 ## Usage
 
