@@ -34,27 +34,31 @@ pip install sounddevice numpy mido python-rtmidi
 The application uses the Top Row (Automap buttons) and the Side Column for control.
 
 ```text
-       [V-] [V+] [<<] [>>] [PK] [D-] [D+] [M!]
-      +----+----+----+----+----+----+----+----+
-      |    |    |    |    |    |    |    |    | [AU]
-      |    |    |    |    |    |    |    |    |
-      |    |    |    |    |    |    |    |    |
-      |    |    |    |    |    |    |    |    |
-      |         V I S U A L I Z E R           |
-      |               G R I D                 |
-      |    |    |    |    |    |    |    |    |
-      |    |    |    |    |    |    |    |    |
-      +----+----+----+----+----+----+----+----+
+       [VOL-]  [VOL+]  [PREV]  [NEXT]  [PEAK]  [DEC-]  [DEC+]  [MUTE]
+      +-------+-------+-------+-------+-------+-------+-------+-------+
+      |       |       |       |       |       |       |       |       |
+      |       |       |       |       |       |       |       |       |
+      |                                                               |
+      |                                                               |
+      |                                                               |   [AUDIO]
+      |                  V I S U A L I Z E R                          |
+      |                        G R I D                                |
+      |                                                               |
+      |                                                               |
+      |                                                               |
+      |       |       |       |       |       |       |       |       |
+      |       |       |       |       |       |       |       |       |
+      +-------+-------+-------+-------+-------+-------+-------+-------+
 ```
 
 | Button Label | Function | Description |
 | :--- | :--- | :--- |
-| **V- / V+** | Volume Control | Decrease / Increase system volume (Windows only). |
-| **<< / >>** | Mode Selection | Cycle through visualizer modes (Prev / Next). |
-| **PK** | Peak Toggle | Toggle floating peak indicators (Mode 1 only). |
-| **D- / D+** | Decay Rate | Adjust visual decay speed (Slower/Faster). |
-| **M!** | Mute Arm | Hold for 0.4s to toggle system mute (prevents accidental presses). |
-| **AU** | Input Cycle | Top-right side button. Cycles through available audio input devices. |
+| **VOL- / VOL+** | Volume Control | Decrease / Increase system volume (Windows only). |
+| **PREV / NEXT** | Mode Selection | Cycle through visualizer modes. |
+| **PEAK** | Peak Toggle | Toggle floating peak indicators (Mode 1 only). |
+| **DEC- / DEC+** | Decay Rate | Adjust visual decay speed (Slower/Faster). |
+| **MUTE** | Mute Arm | Hold for 0.4s to toggle system mute (prevents accidental presses). |
+| **AUDIO** | Input Cycle | Top-right side button. Cycles through available audio input devices. |
 
 ## Usage
 
@@ -66,5 +70,5 @@ The application uses the Top Row (Automap buttons) and the Side Column for contr
 
 ## Troubleshooting
 
-- **No Audio?**: The script tries to auto-detect your "Stereo Mix" or Loopback interface. If it fails, use the side button (89) labeled `[AU]` above to cycle through available audio inputs until you see activity.
+- **No Audio?**: The script tries to auto-detect your "Stereo Mix" or Loopback interface. If it fails, use the side button (89) labeled `[AUDIO]` above to cycle through available audio inputs until you see activity.
 - **MIDI Error**: Ensure no other software (like Ableton Live) has exclusive control over the Launchpad.
