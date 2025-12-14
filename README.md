@@ -1,25 +1,50 @@
-# Audio Device Scanner
+# Launchpad MK2 Visualizer
 
-A utility script to identify active audio input devices on your system, specifically designed to help configure the Launchpad Visualizer.
+A professional-grade Python application that turns your Novation Launchpad MK2 into a high-performance, audio-reactive visualizer.
 
-## Purpose
+## Features
 
-This script (`find_active_audio.py`) scans all available audio input devices to find which one is currently receiving audio. This is useful for determining the correct device index to use in the main visualizer script.
+- **Audio Reactivity**: Real-time FFT analysis using `sounddevice` and `numpy`.
+- **Multiple Modes**:
+  - **Dual Spectrum**: Top/Bottom split frequency analysis.
+  - **Diamond Splash**: Volume-reactive center pulses with particle effects.
+  - **The Oracle**: Esoteric, organic background animations with sparkle overlays.
+  - **Fire & Heatmap**: Classic gradient visualizations.
+- **Particle System**: Physics-based particles that react to audio peaks.
+- **Low Latency**: Optimized for 60 FPS performance.
+- **Auto-Gain Control**: Automatically adjusts sensitivity to input volume.
+
+## Requirements
+
+- Python 3.x
+- Novation Launchpad MK2 (connected via USB)
+
+### Dependencies
+
+Install the required packages:
+
+```bash
+pip install sounddevice numpy mido python-rtmidi
+```
+
+*Note: `pycaw` and `comtypes` are optional for Windows system volume control integration.*
 
 ## Usage
 
-1. **Play Audio**: Start playing music or generate sound on your computer (e.g., Spotify, YouTube).
-2. **Run Script**: Execute the script from your terminal:
+1. **Connect Launchpad**: Ensure your Launchpad MK2 is connected.
+2. **Run the Visualizer**:
    ```bash
-   python find_active_audio.py
+   python launchpad_visualizer.py
    ```
-3. **Wait**: The script will listen for approximately 0.2 seconds on each input device.
-4. **View Results**: 
-    - Real-time volume bars will show for each device.
-    - A summary will list all devices where a signal was detected.
-    - The script will recommend the best Device ID to use.
+3. **Controls**:
+   - **Top Row**:
+     - Buttons 1-2: Volume Control (if enabled)
+     - Buttons 3-4: Previous / Next Mode
+     - Button 5: Toggle Peak Indicators
+     - Button 6-7: Adjust Decay Rate
+     - Button 8: Arm Mute
 
-## Dependencies
+## Troubleshooting
 
-- `sounddevice`
-- `numpy`
+- **No Audio?**: The script tries to auto-detect your "Stereo Mix" or Loopback interface. If it fails, use the side button (89) to cycle through available audio inputs.
+- **MIDI Error**: Ensure no other software (like Ableton Live) has exclusive control over the Launchpad.
